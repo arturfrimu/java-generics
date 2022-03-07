@@ -16,7 +16,7 @@ public class Team<T extends Participant> {
         this.participantList.add(participant);
     }
 
-    public void playWith(Team team) {
+    public void playWith(Team<T> team) {
         String winnerName;
         Random random = new Random();
         int i = random.nextInt(2);

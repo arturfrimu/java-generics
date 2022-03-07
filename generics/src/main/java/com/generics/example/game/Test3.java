@@ -27,9 +27,13 @@ public class Test3 {
         workersTeam.addNewParticipant(employee2);
 
         // Problem nr 3 - Any team can play with any team
-        
-        schoolarTeam.playWith(workersTeam);
-        workersTeam.playWith(studentTeam);
+
+        // incompatible types: Team<Employee> cannot be converted to Team<Schoolar>
+//        schoolarTeam.playWith(workersTeam);
+
+        //incompatible types: Team<Student> cannot be converted to Team<Employee>
+//        workersTeam.playWith(studentTeam);
+        schoolarTeam.playWith(schoolarTeam2);
 
         // ==============================================================
     }
