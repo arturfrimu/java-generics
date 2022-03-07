@@ -12,9 +12,18 @@ public class WildCardExtendsANDSuper {
 //        showInfo(listA);
         showInfo(listB);
         showInfo(listC);
+
+        showInfoSuper(listA);
+        showInfoSuper(listB);
+        // incompatible types: java.util.List<C> cannot be converted to java.util.List<? super B>
+//        showInfoSuper(listC);
     }
 
     static void showInfo(List<? extends B> list) {
+        System.out.println(list);
+    }
+
+    static void showInfoSuper(List<? super B> list) {
         System.out.println(list);
     }
 }
