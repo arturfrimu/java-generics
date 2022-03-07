@@ -11,14 +11,16 @@ public class Test {
         Employee employee1 = new Employee("Zaur", 32);
         Employee employee2 = new Employee("Mikhail", 47);
 
-        Team schoolarTeam = new Team("Draco");
+        Team<Schoolar> schoolarTeam = new Team<>("Draco");
 
         // Problem nr 1 - We can add any participant to the schoolarTeam
 
         schoolarTeam.addNewParticipant(schoolar1);
         schoolarTeam.addNewParticipant(schoolar2);
-        schoolarTeam.addNewParticipant(student1);
-        schoolarTeam.addNewParticipant(employee1);
+        // java: incompatible types: com.generics.example.game.Student cannot be converted to com.generics.example.game.Schoolar
+//        schoolarTeam.addNewParticipant(student1);
+        // java: incompatible types: com.generics.example.game.Student cannot be converted to com.generics.example.game.Schoolar
+//        schoolarTeam.addNewParticipant(employee1);
 
         // ==============================================================
 
