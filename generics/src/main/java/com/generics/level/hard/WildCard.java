@@ -16,9 +16,22 @@ public class WildCard {
 
         WildCard.showListElements(strList);
         WildCard.showListElements(intList);
+
+        ArrayList<Double> list1 = new ArrayList<>();
+        list1.add(1D);
+        list1.add(2D);
+        System.out.println(WildCard.summ(list1));
     }
 
     static void showListElements(List<?> list) {
         System.out.println("My list = " + list);
+    }
+
+    static double summ(ArrayList<? extends Number> al) {
+        double summ = 0;
+        for (Number n : al) {
+            summ += n.doubleValue();
+        }
+        return summ;
     }
 }
