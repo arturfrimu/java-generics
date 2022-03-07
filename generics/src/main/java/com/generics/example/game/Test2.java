@@ -11,14 +11,15 @@ public class Test2 {
         Employee employee1 = new Employee("Zaur", 32);
         Employee employee2 = new Employee("Mikhail", 47);
 
-        // Problem nr 1 - We can create any team with any type
+        // Problem nr 2 - We can create any team with any type
 
         Team<Schoolar> schoolarTeam = new Team<>("Draco");
         Team<Student> studentTeam = new Team<>("Dunk");
         Team<Employee> workersTeam = new Team<>("Workers");
 
         // incorrect business login
-        Team<String> str = new Team<>("Bad Idea");
+        // type argument java.lang.String is not within bounds of type-variable T
+//      Team<String> str = new Team<>("Bad Idea");
 
 
         schoolarTeam.addNewParticipant(schoolar1);

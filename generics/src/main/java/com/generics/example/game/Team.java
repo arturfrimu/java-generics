@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Team<T> {
+public class Team<T extends Participant> {
     private String name;
     private List<T> participantList = new ArrayList<>();
 
